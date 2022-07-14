@@ -1,0 +1,18 @@
+server:
+  port: 9001
+
+spring:
+  application:
+    name: nacos-payment-provider
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 159.75.132.248:8848
+        password: root12345YH@
+        username: nacos
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
