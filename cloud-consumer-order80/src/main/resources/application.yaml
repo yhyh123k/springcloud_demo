@@ -1,0 +1,25 @@
+server:
+  port: 80
+spring:
+  application:
+    name: cloud-consumer
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 182.61.52.252:8848
+        username: nacos
+        password: root12345YH@
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          '*'
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 5000
+        readTimeout: 1000

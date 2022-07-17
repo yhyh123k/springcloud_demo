@@ -1,0 +1,28 @@
+server:
+  port: 9527
+
+spring:
+  application:
+    name: cloud-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: payment_path
+          uri: lb://nacos-config  #???????
+          predicates:
+            - Path=/hello/**   #?????????????
+            - After=2022-07-16T23:01:29.080+08:00[Asia/Shanghai]
+#            - Cookie=username, yh
+    nacos:
+      discovery:
+        server-addr: 182.61.52.252:8848
+        username: nacos
+        password: root12345YH@
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          '*'
+

@@ -1,0 +1,19 @@
+server:
+  port: 2001
+spring:
+  application:
+    name: seata-order-service
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 182.61.52.252:8848
+        username: nacos
+        password: root12345YH@
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://182.61.52.252:3306/chatroom?characterEncoding=UTF-8&serverTimezone=UTC
+    username: root
+    password: root12345YH@
+
+
